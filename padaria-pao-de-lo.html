@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padaria Pão de Ló - Abdon Batista, SC | A culpada por te dar água na boca</title>
+    <meta name="description" content="Padaria artesanal em Abdon Batista - SC. Salgados, bolos e lanches artesanais feitos com ingredientes frescos. Faça seu pedido pelo Instagram.">
+    <meta name="keywords" content="padaria Abdon Batista, lanches artesanais Abdon Batista, bolos caseiros Abdon Batista, salgados Abdon Batista">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Padaria Pão de Ló - Abdon Batista, SC">
+    <meta property="og:description" content="A culpada por te dar água na boca. Salgados, bolos e lanches artesanais.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://padariapaodelo.com.br">
+    <meta property="og:image" content="https://padariapaodelo.com.br/og-image.jpg">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Bakery",
+      "name": "Padaria Pão de Ló",
+      "image": "https://padariapaodelo.com.br/logo.jpg",
+      "description": "Padaria artesanal em Abdon Batista - SC. Salgados, bolos e lanches artesanais.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Abdon Batista",
+        "addressRegion": "SC",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-27.4658",
+        "longitude": "-51.0264"
+      },
+      "url": "https://www.instagram.com/padaria_paode_lo",
+      "sameAs": "https://www.instagram.com/padaria_paode_lo",
+      "priceRange": "$$",
+      "servesCuisine": "Padaria Artesanal"
+    }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lora:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --marrom-profundo: #3E2723;
+            --marrom-quente: #5D4037;
+            --laranja-vibrante: #F57C00;
+            --laranja-suave: #FF9800;
+            --bege-claro: #F5E6D3;
+            --branco-quente: #FFF8E1;
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Lora', serif;
+            color: var(--marrom-profundo);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background: var(--branco-quente);
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 248, 225, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 2px solid var(--bege-claro);
+        }
+        
+        header.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 4px 20px rgba(62, 39, 35, 0.1);
+        }
+        
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--marrom-profundo);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        
+        nav a {
+            color: var(--marrom-quente);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--laranja-vibrante);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--laranja-vibrante);
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--marrom-profundo);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--bege-claro) 0%, var(--branco-quente) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grain" patternUnits="userSpaceOnUse" width="100" height="100"><rect width="100" height="100" fill="%23F5E6D3"/><circle cx="10" cy="10" r="1" fill="%233E2723" opacity="0.03"/><circle cx="30" cy="20" r="1" fill="%233E2723" opacity="0.03"/><circle cx="50" cy="15" r="1" fill="%233E2723" opacity="0.03"/><circle cx="70" cy="25" r="1" fill="%233E2723" opacity="0.03"/><circle cx="90" cy="10" r="1" fill="%233E2723" opacity="0.03"/><circle cx="20" cy="40" r="1" fill="%233E2723" opacity="0.03"/><circle cx="60" cy="45" r="1" fill="%233E2723" opacity="0.03"/><circle cx="80" cy="50" r="1" fill="%233E2723" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.4;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-text {
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+        
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            color: var(--marrom-profundo);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+        
+        .hero-text .subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            color: var(--marrom-quente);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .slogan {
+            font-family: 'Crimson Text', serif;
+            font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+            font-style: italic;
+            color: var(--laranja-vibrante);
+            font-weight: 700;
+            margin: 2rem 0;
+            letter-spacing: 0.5px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .btn span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .btn-primary {
+            background: var(--laranja-vibrante);
+            color: var(--branco-quente);
+            box-shadow: 0 4px 15px rgba(245, 124, 0, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: var(--laranja-suave);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(245, 124, 0, 0.4);
+        }
+        
+        .btn-secondary {
+            background: var(--marrom-profundo);
+            color: var(--bege-claro);
+            box-shadow: 0 4px 15px rgba(62, 39, 35, 0.2);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--marrom-quente);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(62, 39, 35, 0.3);
+        }
+        
+        .hero-image {
+            position: relative;
+            opacity: 0;
+            animation: fadeInRight 1s ease 0.3s forwards;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(62, 39, 35, 0.2);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: var(--spacing-xl) 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            color: var(--marrom-profundo);
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--marrom-quente);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* About Section */
+        .about {
+            background: linear-gradient(180deg, var(--branco-quente) 0%, var(--bege-claro) 100%);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            color: var(--marrom-quente);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .about-text .highlight {
+            background: linear-gradient(120deg, var(--laranja-suave) 0%, var(--laranja-vibrante) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            font-size: 1.3rem;
+            display: block;
+            margin-top: 2rem;
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(62, 39, 35, 0.15);
+        }
+        
+        /* Menu Section */
+        .menu {
+            background: var(--branco-quente);
+        }
+        
+        .menu-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .menu-category {
+            background: var(--bege-claro);
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+        
+        .menu-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(62, 39, 35, 0.15);
+            border-color: var(--laranja-suave);
+        }
+        
+        .category-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .category-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--marrom-profundo);
+            margin-bottom: 0.5rem;
+        }
+        
+        .category-description {
+            color: var(--marrom-quente);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        /* Product Cards */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .product-card {
+            background: var(--branco-quente);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 2px solid var(--bege-claro);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(62, 39, 35, 0.15);
+            border-color: var(--laranja-suave);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--marrom-profundo);
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-description {
+            color: var(--marrom-quente);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        /* Lanches Highlight */
+        .lanches-highlight {
+            background: linear-gradient(135deg, var(--marrom-profundo) 0%, var(--marrom-quente) 100%);
+            padding: 4rem;
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+        
+        .lanches-highlight::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(245, 124, 0, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: var(--laranja-vibrante);
+            color: var(--branco-quente);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(245, 124, 0, 0.3);
+        }
+        
+        .lanches-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .lanches-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--bege-claro);
+            margin-bottom: 1rem;
+        }
+        
+        .lanches-text p {
+            font-size: 1.1rem;
+            color: var(--bege-claro);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .lanches-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Diferenciais */
+        .diferenciais {
+            background: var(--bege-claro);
+        }
+        
+        .diferenciais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .diferencial-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--branco-quente);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .diferencial-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(62, 39, 35, 0.1);
+        }
+        
+        .diferencial-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .diferencial-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--marrom-profundo);
+            margin-bottom: 0.5rem;
+        }
+        
+        .diferencial-item p {
+            color: var(--marrom-quente);
+            line-height: 1.6;
+        }
+        
+        /* Localização */
+        .localizacao {
+            background: var(--branco-quente);
+        }
+        
+        .localizacao-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        
+        .localizacao-info {
+            background: var(--bege-claro);
+            padding: 3rem;
+            border-radius: 20px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .info-icon {
+            font-size: 2rem;
+            color: var(--laranja-vibrante);
+            min-width: 40px;
+        }
+        
+        .info-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--marrom-profundo);
+            margin-bottom: 0.5rem;
+        }
+        
+        .info-text p {
+            color: var(--marrom-quente);
+            line-height: 1.6;
+        }
+        
+        .map-container {
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(62, 39, 35, 0.15);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Instagram Section */
+        .instagram-cta {
+            background: linear-gradient(135deg, var(--laranja-suave) 0%, var(--laranja-vibrante) 100%);
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .instagram-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+        }
+        
+        .instagram-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .instagram-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            color: var(--branco-quente);
+            margin-bottom: 1rem;
+        }
+        
+        .instagram-content p {
+            font-size: 1.3rem;
+            color: var(--branco-quente);
+            margin-bottom: 2rem;
+        }
+        
+        .instagram-handle {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--branco-quente);
+            color: var(--laranja-vibrante);
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .instagram-handle:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, var(--marrom-profundo) 0%, #2c1810 100%);
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="1" fill="%23F5E6D3" opacity="0.05"/><circle cx="30" cy="20" r="1" fill="%23F5E6D3" opacity="0.05"/><circle cx="50" cy="15" r="1" fill="%23F5E6D3" opacity="0.05"/><circle cx="70" cy="25" r="1" fill="%23F5E6D3" opacity="0.05"/><circle cx="90" cy="10" r="1" fill="%23F5E6D3" opacity="0.05"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .final-cta-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .final-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            color: var(--bege-claro);
+            margin-bottom: 1rem;
+        }
+        
+        .final-cta p {
+            font-size: 1.5rem;
+            color: var(--bege-claro);
+            margin-bottom: 2.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a0f0a;
+            color: var(--bege-claro);
+            padding: 3rem 0 1.5rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--bege-claro);
+            margin-bottom: 1rem;
+        }
+        
+        .footer-slogan {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--laranja-suave);
+            margin-bottom: 2rem;
+        }
+        
+        .footer-social {
+            margin: 2rem 0;
+        }
+        
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--bege-claro);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-social a:hover {
+            color: var(--laranja-vibrante);
+        }
+        
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(245, 230, 211, 0.2);
+            font-size: 0.9rem;
+            color: rgba(245, 230, 211, 0.7);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content,
+            .about-content,
+            .lanches-content,
+            .localizacao-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-image img,
+            .about-image img,
+            .lanches-image img {
+                height: 400px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            :root {
+                --spacing-lg: 3rem;
+                --spacing-xl: 4rem;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: var(--branco-quente);
+                padding: 2rem;
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.3s ease;
+                box-shadow: 0 10px 30px rgba(62, 39, 35, 0.1);
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .hero {
+                margin-top: 60px;
+                min-height: auto;
+                padding: 3rem 0;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .menu-categories {
+                grid-template-columns: 1fr;
+            }
+            
+            .lanches-highlight {
+                padding: 2rem;
+            }
+            
+            .diferenciais-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .localizacao-info {
+                padding: 2rem;
+            }
+            
+            .instagram-handle {
+                padding: 1.2rem 2rem;
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-content {
+                padding: 0 1rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .logo {
+                font-size: 1.4rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-content">
+            <a href="#" class="logo">Pão de Ló</a>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                    <li><a href="https://www.instagram.com/padaria_paode_lo" target="_blank">Instagram</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Sabor que conquista Abdon Batista.</h1>
+                <p class="subtitle">Salgados, bolos e lanches artesanais feitos com ingredientes selecionados.</p>
+                <p class="slogan">"A culpada por te dar água na boca."</p>
+                <div class="hero-buttons">
+                    <a href="#cardapio" class="btn btn-primary">
+                        <span>🥐</span>
+                        <span>Ver Cardápio</span>
+                    </a>
+                    <a href="https://www.instagram.com/padaria_paode_lo" target="_blank" class="btn btn-secondary">
+                        <span>📲</span>
+                        <span>Fazer Pedido</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=800&h=600&fit=crop" alt="Lanches artesanais da Padaria Pão de Ló">
+            </div>
+        </div>
+    </section>
+
+    <!-- Top CTA Section -->
+    <section class="instagram-cta" style="padding: 3rem 0;">
+        <div class="container">
+            <div class="instagram-content">
+                <h2 style="font-size: clamp(1.8rem, 3vw, 2.5rem);">Peça agora pelo Instagram!</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Atendimento rápido e direto. Estamos online! 🔥</p>
+                <a href="https://www.instagram.com/padaria_paode_lo" target="_blank" class="instagram-handle" style="font-size: 1.3rem; padding: 1rem 2.5rem;">
+                    <span>📸</span>
+                    <span>@padaria_paode_lo</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Feito com amor, servido com carinho</h2>
+                    <p>Na <strong>Padaria Pão de Ló</strong>, cada produto é preparado com dedicação e ingredientes frescos selecionados especialmente para você. Nossa produção é 100% artesanal e feita diariamente.</p>
+                    <p>Estamos em Abdon Batista há anos, conquistando o paladar de quem aprecia qualidade e sabor autêntico. Do pãozinho quentinho do café da manhã aos lanches especiais, nosso compromisso é fazer você se sentir em casa.</p>
+                    <p>Nosso atendimento é direto, prático e feito com atenção. Todo pedido passa pelo nosso Instagram, onde respondemos rapidamente e garantimos que você receba exatamente o que deseja.</p>
+                    <span class="highlight">"A culpada por te dar água na boca."</span>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&h=600&fit=crop" alt="Produção artesanal da Padaria Pão de Ló">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="cardapio" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nosso Cardápio</h2>
+                <p class="section-subtitle">Produtos artesanais feitos com ingredientes frescos e muito sabor</p>
+            </div>
+            
+            <!-- Salgados -->
+            <div style="margin-bottom: 4rem;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <div style="font-size: 3rem; margin-bottom: 0.5rem;">🥐</div>
+                    <h3 class="section-title" style="font-size: 2rem; margin-bottom: 0.5rem;">Salgados</h3>
+                    <p style="color: var(--marrom-quente); font-size: 1.1rem;">Feitos na hora com recheios generosos e massa crocante</p>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1625937286074-9ca519d5d9df?w=400&h=300&fit=crop" alt="Coxinha" class="product-image">
+                        <div class="product-info">
+                            <h4 class="product-name">Coxinha de Frango</h4>
+                            <p class="product-description">Massa sequinha e crocante com recheio cremoso de frango desfiado temperado.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1618998462783-bd86bc6c5e76?w=400&h=300&fit=crop" alt="Pastel" class="product-image">
+                        <div class="product-info">
+                            <h4 class="product-name">Pastel Assado</h4>
+                            <p class="product-description">Massa folhada leve com recheios variados: carne, queijo, frango e pizza.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=300&fit=crop" alt="Empada" class="product-image">
+                        <div class="product-info">
+                            <h4 class="product-name">Empada Gourmet</h4>
+                            <p class="product-description">Massa amanteigada com recheios especiais de frango, palmito e camarão.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1619869770193-003c300caca7?w=400&h=300&fit=crop" alt="Esfiha" class="product-image">
+                        <div class="product-info">
+                            <h4 class="product-name">Esfiha Artesanal</h4>
+                            <p class="product-description">Massa macia com recheios tradicionais de carne, queijo e frango catupiry.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="https://www.instagram.com/padaria_paode_lo" target="_blank" class="btn btn-primary">
+                        <span>Pedir Salgados pelo Instagram</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Bolos -->
+            <div style="margin-bottom: 4rem; background: var(--bege-claro); padding: 3rem 2rem; border-radius: 20px;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <div style="font-size: 3rem; margin-bottom: 0.5rem;">🎂</div>
+                    <h3 class="section-title" style="font-size: 2rem; margin-bottom: 0.5rem;">Bolos</h3>
+                    <p style="color: var(--marrom-quente); font-size: 1.1rem;">Perfeitos para festas, aniversários ou aquele cafezinho especial</p>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop" alt="Bolo de Chocolate" class="product-image">
+                        <div class="product-info">
+                            <h4 class="product-name">Bolo de Chocolate</h4>
+                            <p class="product-description">Massa fofinha de chocolate com recheio e cobertura de brigadeiro cremoso.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=400&h=300&fit=crop" alt="Bolo de Cenoura" class="product-image">
+                        <div class="product-info">
+                            <h4 class="product-name">Bolo de Cenoura</h4>
+                            <p class="product-description">Clássico caseiro com cobertura de chocolate. Úmido e saboroso!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400&h=300&fit=crop" alt="Bolo Red Velvet" class="product-image">
+                        <div class="product-info">
+                            <h4 class="product-name">Bolo Red Velvet</h4>
+                            <p class="product-description">Massa aveludada vermelha com cream cheese. Sofisticado e irresistível.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=400&h=300&fit=crop" alt="Torta de Limão" class="product-image">
+                        <div class="product-info">
+                            <h4 class="product-name">Torta de Limão</h4>
+                            <p class="product-description">Base crocante com recheio cremoso de limão e merengue maçaricado.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="https://www.instagram.com/padaria_paode_lo" target="_blank" class="btn btn-primary">
+                        <span>Encomendar Bolos pelo Instagram</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Pães -->
+            <div style="margin-bottom: 4rem;">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <div style="font-size: 3rem; margin-bottom: 0.5rem;">🍞</div>
+                    <h3 class="section-title" style="font-size: 2rem; margin-bottom: 0.5rem;">Pães Artesanais</h3>
+                    <p style="color: var(--marrom-quente); font-size: 1.1rem;">Assados fresquinhos todos os dias</p>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=400&h=300&fit=crop" alt="Pão Francês" class="product-image">
+                        <div class="product-info">
+                            <h4 class="product-name">Pão Francês</h4>
+                            <p class="product-description">Quentinho e crocante, saindo do forno várias vezes ao dia. Tradicional e irresistível.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop" alt="Pão de Forma" class="product-image">
+                        <div class="product-info">
+                            <h4 class="product-name">Pão de Forma Integral</h4>
+                            <p class="product-description">Macio e nutritivo, ideal para sanduíches e torradas do café da manhã.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?w=400&h=300&fit=crop" alt="Pão Italiano" class="product-image">
+                        <div class="product-info">
+                            <h4 class="product-name">Pão Italiano</h4>
+                            <p class="product-description">Crocante por fora, macio por dentro. Perfeito para acompanhamentos.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=400&h=300&fit=crop" alt="Pão de Alho" class="product-image">
+                        <div class="product-info">
+                            <h4 class="product-name">Pão de Alho Caseiro</h4>
+                            <p class="product-description">Recheado com manteiga de alho temperada. Crocante e saboroso!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="https://www.instagram.com/padaria_paode_lo" target="_blank" class="btn btn-primary">
+                        <span>Pedir Pães pelo Instagram</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Lanches Highlight -->
+            <div class="lanches-highlight">
+                <span class="badge">✨ NOVIDADE ✨</span>
+                
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900; color: var(--bege-claro); margin-bottom: 0.5rem;">Lanches Artesanais</h3>
+                    <p style="font-size: 1.2rem; color: var(--bege-claro);">Hamburgueres e sanduíches que vão surpreender seu paladar</p>
+                </div>
+                
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop" alt="Hamburguer Artesanal" class="product-image">
+                        <div class="product-info">
+                            <h4 class="product-name">Burguer Artesanal</h4>
+                            <p class="product-description">Blend de carnes nobres, queijo derretido, salada fresquinha e molho especial no pão brioche.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="X-Tudo" class="product-image">
+                        <div class="product-info">
+                            <h4 class="product-name">X-Tudo da Casa</h4>
+                            <p class="product-description">Hamburguer, presunto, queijo, bacon, ovo, salada completa. Generoso e delicioso!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1619221882783-8d3d7b8b5d3f?w=400&h=300&fit=crop" alt="Sanduíche Natural" class="product-image">
+                        <div class="product-info">
+                            <h4 class="product-name">Sanduíche Natural</h4>
+                            <p class="product-description">Opção leve e saudável com peito de peru, cream cheese, alface e tomate no pão integral.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop" alt="Croissant Recheado" class="product-image">
+                        <div class="product-info">
+                            <h4 class="product-name">Croissant Recheado</h4>
+                            <p class="product-description">Massa folhada francesa com recheios especiais: presunto e queijo, frango ou chocolate.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2.5rem;">
+                    <a href="https://www.instagram.com/padaria_paode_lo" target="_blank" class="btn btn-primary" style="background: var(--branco-quente); color: var(--laranja-vibrante); font-size: 1.1rem;">
+                        <span>🍔</span>
+                        <span>Pedir Lanches Agora</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section id="diferenciais" class="diferenciais">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Diferenciais</h2>
+                <p class="section-subtitle">O que faz da Pão de Ló a escolha de Abdon Batista</p>
+            </div>
+            
+            <div class="diferenciais-grid">
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">🌅</div>
+                    <h3>Produção Diária</h3>
+                    <p>Tudo feito fresquinho todos os dias. Você sempre leva para casa produtos no ponto ideal de sabor e frescor.</p>
+                </div>
+                
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">✨</div>
+                    <h3>Ingredientes Selecionados</h3>
+                    <p>Escolhemos criteriosamente cada ingrediente para garantir máxima qualidade em cada mordida.</p>
+                </div>
+                
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">🎨</div>
+                    <h3>Encomendas Sob Medida</h3>
+                    <p>Personalizamos bolos, tortas e salgados para festas e eventos especiais. Entre em contato pelo Instagram!</p>
+                </div>
+                
+                <div class="diferencial-item">
+                    <div class="diferencial-icon">⚡</div>
+                    <h3>Atendimento Rápido</h3>
+                    <p>Pedidos pelo Instagram com resposta ágil. Facilitamos sua vida com praticidade e eficiência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização -->
+    <section id="localizacao" class="localizacao">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Onde Estamos</h2>
+                <p class="section-subtitle">Venha nos visitar em Abdon Batista</p>
+            </div>
+            
+            <div class="localizacao-content">
+                <div class="localizacao-info">
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <h3>Localização</h3>
+                            <p><strong>Av. 26 de Abril, 714</strong><br>Abdon Batista – SC, 89636-000</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">🕒</div>
+                        <div class="info-text">
+                            <h3>Horário de Funcionamento</h3>
+                            <p>Segunda a Sábado: 6h às 19h<br>Domingo: 6h às 12h</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📲</div>
+                        <div class="info-text">
+                            <h3>Atendimento</h3>
+                            <p>Exclusivo pelo Instagram<br><strong>@padaria_paode_lo</strong></p>
+                        </div>
+                    </div>
+                    
+                    <a href="https://maps.app.goo.gl/Ly4xxiFpSbJ9869DA" target="_blank" class="btn btn-primary" style="width: 100%; margin-top: 2rem; justify-content: center;">
+                        <span>🗺️</span>
+                        <span>Abrir no Google Maps</span>
+                    </a>
+                </div>
+                
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3517.234!2d-51.0264!3d-27.4658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fa8c8c8c8c8c8d%3A0x1234567890abcdef!2sAv.%2026%20de%20Abril%2C%20714%20-%20Abdon%20Batista%20-%20SC%2C%2089636-000!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram CTA -->
+    <section class="instagram-cta">
+        <div class="container">
+            <div class="instagram-content">
+                <h2>Faça seu pedido direto pelo Instagram</h2>
+                <p>Rápido, simples e direto. Estamos esperando por você!</p>
+                <a href="https://www.instagram.com/padaria_paode_lo" target="_blank" class="instagram-handle">
+                    <span>📸</span>
+                    <span>@padaria_paode_lo</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2>Já deu água na boca?</h2>
+                <p>Então chama a gente no Instagram.</p>
+                <a href="https://www.instagram.com/padaria_paode_lo" target="_blank" class="btn btn-primary" style="font-size: 1.2rem; padding: 1.2rem 3rem;">
+                    <span>🍞</span>
+                    <span>Fazer Pedido Agora</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Pão de Ló</div>
+            <div class="footer-slogan">"A culpada por te dar água na boca."</div>
+            
+            <div class="footer-bottom" style="margin-top: 2rem; padding-top: 1.5rem;">
+                <p>&copy; 2026 Padaria Pão de Ló - Abdon Batista, SC, Brasil</p>
+                <p>Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.getElementById('nav');
+        
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Intersection Observer for sections
+        const sections = document.querySelectorAll('section');
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = header.offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
